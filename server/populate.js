@@ -2,15 +2,16 @@
 var leveldown = require('leveldown');
 var levelup = require('levelup');
 var mkdirp = require('mkdirp');
+var config = require('./config');
 var fixture = require('./fixture.json');
 
 // Clear the database before population
-leveldown.destroy('.data/db', function (err) {
+leveldown.destroy(config.dbDir, function (err) {
   if (err) { return console.error(err); }
 
-  mkdirp.sync('.data/db');
+  mkdirp.sync(config.dbDir);
 
-  var db = levelup('.data/db', {
+  var db = levelup(config.dbDir, {
     valueEncoding: 'json',
   });
 

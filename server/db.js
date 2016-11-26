@@ -1,8 +1,9 @@
 var levelup = require('levelup');
 var mkdirp = require('mkdirp');
+var config = require('./config');
 
-mkdirp.sync('.data/db');
+mkdirp.sync(config.dbDir);
 
-module.exports = levelup('.data/db', {
+module.exports = levelup(config.dbDir, {
   valueEncoding: 'json',
 });

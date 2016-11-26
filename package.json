@@ -1,6 +1,6 @@
 {
   "name": "aha",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Visual communication app for GE Health Challenge at Junction 2016",
   "main": "server/index.js",
   "scripts": {
