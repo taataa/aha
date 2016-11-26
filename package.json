@@ -1,0 +1,41 @@
+{
+  "name": "aha",
+  "version": "1.0.0",
+  "description": "Visual communication app for GE Health Challenge at Junction 2016",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/populate && webpack && node server/index.js",
+    "build": "webpack --watch",
+    "populate": "node server/populate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taataa/aha.git"
+  },
+  "keywords": [
+    "health",
+    "images"
+  ],
+  "author": "Akseli Palen <akseli.palen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taataa/aha/issues"
+  },
+  "homepage": "https://github.com/taataa/aha#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "leveldown": "^1.5.0",
+    "levelup": "^1.3.3",
+    "lodash": "^4.17.2",
+    "mkdirp": "^0.5.1",
+    "nudged": "^1.2.0",
+    "shortid": "^2.2.6",
+    "socket.io": "^1.6.0",
+    "socket.io-client": "^1.6.0",
+    "taach": "taataa/taach.git#develop",
+    "taaspace": "^3.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3"
+  }
+}
