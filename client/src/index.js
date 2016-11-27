@@ -93,7 +93,6 @@ socket.emit('read', {}, function (items) {
 
     tou.on('tap', function () {
       utils.addHappies(spaceItem, view, happies);
-      view.translate(view.atMid(), spaceItem.atMid());
     });
 
     // Add class for styling
